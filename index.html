@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Henry J. Perez</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body{
+			background-color: black;
+		}
+		.grid-layout{
+			display: grid;
+			margin: 10px;
+			gap: 10px;
+			/* grid-template-columns: minmax(200px, 200px); */
+			grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+			/* grid-template-rows: 1fr; */
+			grid-template-rows: repeat(auto-fill, 200px);
+		}
+		.grid-element{
+			height: 200px;
+			/* height: 100px; */
+			/* width: 200px; */
+			/* min-height: 200px; */
+			transition: 1s;
+			/* grid-row: 200px; */
+		}
+		.red{
+			background-color: red;
+			/* grid-column: span 1; */
+		}
+		.blue{
+			background-color: blue;
+			grid-column: span 2;
+		}
+		.yellow{
+			background-color: yellow;
+			grid-row: span 2;
+			height: 100%;
+			min-height: 200px;
+		}
+		.green{
+			background-color: green;
+			height: 100%;
+			grid-column: span 2;
+			grid-row: span 2;
+			min-height: 200px;
+		}
+	</style>
+</head>
+<body>
+	<div class="main-wrapper">
+		<div class="grid-layout">
+			<div class="grid-element red"></div>
+			<div class="grid-element blue"></div>
+			<div class="grid-element yellow"></div>
+			<div class="grid-element green"></div>
+			<div class="grid-element red"></div>
+			<div class="grid-element blue"></div>
+			<div class="grid-element yellow"></div>
+			<div class="grid-element green"></div>
+			<div class="grid-element red"></div>
+			<div class="grid-element blue"></div>
+			<div class="grid-element yellow"></div>
+			<div class="grid-element green"></div>
+		</div>
+	</div>
+</body>
+</html>
